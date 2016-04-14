@@ -5,9 +5,9 @@ order.FREQ <- order(data$FREQ,data$WORD,decreasing=TRUE)
 data$rank <- NA
 data$rank[order.FREQ] <- 1:nrow(data)
 jpeg('zipf_log.jpg')
-plot(log(data$rank), log(data$FREQ))
+plot(log(data$rank), log(data$FREQ),xlab='log(Rank)', ylab='log(Freq(Rank)')
 dev.off()
 jpeg('zipf_raw.jpg')
-plot(data$rank, data$FREQ)
+plot(data$rank, data$FREQ, xlab="Rank", ylab="Freq")
 dev.off()
 
