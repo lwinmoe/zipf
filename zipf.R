@@ -7,7 +7,7 @@ data <- read.csv("count_1w.txt", header=TRUE,sep="\t")
 data <- data[order(data$FREQ,decreasing=TRUE),]
 
 # in decreasing order by the FREQ column
-order.FREQ <- order(data$FREQ,data$WORD,decreasing=TRUE)
+order.FREQ <- order(data$FREQ,decreasing=TRUE)
 
 # to add a new column (RANK) using order.FREQ defined above
 data$rank <- NA
